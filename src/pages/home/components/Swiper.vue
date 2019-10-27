@@ -1,0 +1,49 @@
+<template>
+  <div class="wrapper">
+    <swiper :options="swiperOption">
+      <swiper-slide v-for="item of swiperList" :key="item.id">
+        <img class="swiper-img" :src="item.imgUrl">
+      </swiper-slide>
+      <div class="swiper-pagination"  slot="pagination"></div>
+    </swiper>
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: 'HomeSwiper',
+  data () {
+    return {
+      swiperOption: {
+        pagination: '.swiper-pagination',
+        loop: true
+      },
+      swiperList: [{
+        id: '0001',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1609/47/0cfdc871ac183702.jpg_750x200_f6896acd.jpg'
+      }, {
+        id: '0002',
+        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/fdff7e5abe30ec5f014b4d7464e0c3ef.jpg_750x200_d1d693c8.jpg'
+      }]
+    }
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+.wrapper >>> .swiper-pagination-bullet
+  background: #fff
+  opacity: 0.5
+.wrapper >>> .swiper-pagination-bullet-active
+  opacity: 1
+.wrapper
+  overflow: hidden
+  width: 100%
+  height: 0
+  padding-bottom: 26.67%
+  background: #eee
+  .swiper-img
+    width: 100%
+
+</style>
