@@ -33,6 +33,8 @@ export default {
 
 <style lang="stylus" scoped>
 .wrapper >>> .swiper-pagination-bullet
+  width: .12rem
+  height: .12rem
   background: #fff
   opacity: 0.5
 .wrapper >>> .swiper-pagination-bullet-active

@@ -23,7 +23,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   .header
@@ -42,7 +41,7 @@ export default {
       margin: .12rem .2rem
       padding-left: .2rem
       background: #fff
-      color: #ccc
+      color: #e4e7ea
       border-radius: .1rem
     .header-right
       width: 1.24rem
