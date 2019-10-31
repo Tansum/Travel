@@ -45,6 +45,7 @@ export default {
   @import '~styles/mixins.styl'
   .recommend
     margin-top: .2rem
+    background: #fff
     .group-title
       padding: .24rem 0 .26rem
       .iconfont

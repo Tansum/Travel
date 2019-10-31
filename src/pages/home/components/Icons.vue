@@ -63,13 +63,8 @@ export default {
   opacity: .8
 .icons >>> .swiper-pagination-bullet-active
   background: #00AFBE
-/*
 .icons
-  overflow: hidden
-  height: 0
-  padding-bottom: 50%
-  background: pink
-*/
+  background: #fff
   .icon
     position: relative
     overflow: hidden

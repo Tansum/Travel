@@ -8,8 +8,12 @@
       搜索：目的地/酒店/景点/航班号
     </div>
     <div class="header-right">
-      {{this.city}}
-      <span class="iconfont">&#xe6aa;</span>
+      <router-link to="/city">
+        <span>
+          {{this.city}}
+          <i class="iconfont downarrow">&#xe6aa;</i>
+        </span>
+      </router-link>
     </div>
   </div>
 </template>
@@ -30,25 +34,28 @@ export default {
   @import '~styles/varibles.styl'
   .header
     display: flex
-    line-height: .86rem
+    line-height: $headerHeight
     background: $bgColor
     color: #fff
     .header-left
-      width: .64rem
       float: left
+      width: .4rem
+      padding: 0 .2rem
       text-align: center
     .header-input
       flex: 1
-      height: .64rem
-      line-height: .64rem
-      margin: .12rem .2rem
+      height: .6rem
+      line-height: .6rem
+      margin: .14rem 0
       padding-left: .2rem
       background: #fff
       color: #e4e7ea
-      border-radius: .1rem
+      border-radius: .06rem
     .header-right
-      width: 1.24rem
       float: right
-      margin-left: -.04rem
-      text-align: center
+      a
+        display: inline-block
+        color: #fff
+        span
+          padding: 0 .18rem
 </style>
