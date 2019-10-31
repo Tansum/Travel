@@ -5,7 +5,7 @@
       <span class="title">猜你喜欢</span>
     </div>
     <ul class="recommend-list">
-      <li class="list-item" v-for="item of recommendList" :key="item.id">
+      <li class="list-item" v-for="item of list" :key="item.id">
         <a class="fulllink" href="#">
           <div class="imgcon">
             <img class="img" :src="item.imgUrl">
@@ -30,30 +30,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        title: '西安城墙',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1703/3a/3a4a9641a8867671a3.img.png_200x200_9a235bb9.png',
-        desc: '西安城墙西安城墙西安城墙西安城墙西安城墙',
-        price: 54,
-        address: '碑林区'
-      }, {
-        id: '0002',
-        title: '华清宫',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1602/53/53cf6caed9f9b9ee90.img.jpg_200x200_f5476a84.jpg',
-        desc: '探寻杨贵妃御汤遗址',
-        price: 108,
-        address: '临潼区'
-      }, {
-        id: '0003',
-        title: '长恨歌',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1505/18/18ffcca94b1b7ca2.water.jpg_200x200_9b0d2dc4.jpg',
-        desc: '重现杨贵妃和唐玄宗的爱情故事',
-        price: 223,
-        address: '华清宫'
-      }]
     }
   }
 }

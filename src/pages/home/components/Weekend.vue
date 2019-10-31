@@ -2,7 +2,7 @@
   <div class="weekend">
     <h2 class="modtitle">周末去哪儿</h2>
     <ul class="weekend-list">
-      <li class="weekend-list-item" v-for="item of recommendList" :key="item.id">
+      <li class="weekend-list-item" v-for="item of list" :key="item.id">
         <a class="fulllink" href="#">
           <div class="imgcon">
             <img class="img" :src="item.imgUrl">
@@ -20,24 +20,12 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        title: '西安必打卡',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/19/58f233e11df7ef.jpg_r_640x214_6b42c9fc.jpg',
-        desc: '寻长安梦，开启穿越的圆梦之旅'
-      }, {
-        id: '0002',
-        title: '探寻文化古都',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/63/808c022b285a2c.jpg_r_640x214_ad984479.jpg',
-        desc: '一场时空穿越的旅行，探寻历史悠久的文化古都！探寻历史悠久的文化古都'
-      }, {
-        id: '0003',
-        title: '醉美丝路行',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1511/14/1cf5dc2ecbfc16.jpg_r_640x214_b4b3a58a.jpg',
-        desc: '情系西北，中国梦丝路行'
-      }]
+
     }
   }
 }

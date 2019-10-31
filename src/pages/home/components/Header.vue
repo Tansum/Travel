@@ -8,7 +8,7 @@
       搜索：目的地/酒店/景点/航班号
     </div>
     <div class="header-right">
-      城市
+      {{this.city}}
       <span class="iconfont">&#xe6aa;</span>
     </div>
   </div>
@@ -17,6 +17,9 @@
 <script>
 export default {
   name: 'HomeHeader',
+  props: {
+    city: String
+  },
   data () {
     return {}
   }
